@@ -1,32 +1,47 @@
-
-## Links
-
-### run server
-
-uvicorn backend.main:app --reload
-uvicorn backend.app.main:app --reload
-
-### access page
-
-http://127.0.0.1:8000/
-
-### docs page
-
-http://127.0.0.1:8000/docs
-
-
-### open api json definition
-
-http://127.0.0.1:8000/openapi.json
-
-
+# README
 
 ## Instructions
+
+### Setup
 
 1. install docker: docs.docker.com/engine/install/ubuntu
 
 2. run:
-''' 
+```
 sudo usermod -a -G docker $USER
 reboot
-'''
+```
+
+### Execution
+
+#### run server (docker)
+
+```
+cd backend
+bash scripts/docker-build.sh
+bash scripts/docker-run.sh
+```
+
+#### run server (locally)
+
+```
+uvicorn backend.app.main:app --reload
+```
+
+
+## Links
+
+### access page
+
+http://localhost:8008
+
+### docs page
+
+http://localhost:8008/docs
+
+
+### open api json definition
+
+http://localhost:8008/openapi.json
+
+
