@@ -17,9 +17,20 @@ reboot
 #### run server (docker)
 
 ```
-cd backend
 bash scripts/docker-build.sh
 bash scripts/docker-run.sh
+```
+
+#### stop docker containers
+
+```
+bash scripts/docker-stop.sh
+```
+
+#### clean docker compose volume (clean up database)
+
+```
+bash scripts/docker-cleanup.sh
 ```
 
 #### run server (locally)
@@ -28,6 +39,11 @@ bash scripts/docker-run.sh
 uvicorn backend.app.main:app --reload
 ```
 
+#### api test
+
+```
+bash scripts/test.sh
+```
 
 ## Links
 
