@@ -1,1 +1,0 @@
-docker run -d --name meds-app-container -p 80:80 meds-app-api
