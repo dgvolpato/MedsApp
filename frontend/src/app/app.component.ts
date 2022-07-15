@@ -8,7 +8,7 @@ import { MainService } from './services/main.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'frontend';
+  title = 'Did I take my pills today?';
   daily_status:any;
 
   constructor(private service:MainService){}
