@@ -1,4 +1,6 @@
-# README
+# MedsApp
+
+Keeps track of the state of medication taken each day.
 
 ## Instructions
 
