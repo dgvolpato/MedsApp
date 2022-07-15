@@ -1,6 +1,6 @@
 # MedsApp
 
-Keeps track of the state of medication taken each day.
+Records the state of medication taken each day for our HoloLens project.
 
 ## Instructions
 
