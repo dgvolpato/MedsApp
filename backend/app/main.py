@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from datetime import datetime
 from backend.app.db import database, PillIntake
+from fastapi.middleware.cors import CORSMiddleware
 
 class DailyStatus(str, Enum):
     take_pill = "Take Pill"
@@ -11,6 +12,20 @@ class DailyStatus(str, Enum):
 
 app = FastAPI(title="MedsApp")
 
+origins = [
+    "http://localhost",
+    "http://localhost:8080",
+    "http://localhost:4200",
+    "http://localhost:80",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/pill-intake")
 async def get_pill_intake():

@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<ng-container *ngIf="daily_status">
+  <button type="button" (click)="take_pills()">
+    {{ daily_status.status }}
+  </button>
+</ng-container>
