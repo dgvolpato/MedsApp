@@ -45,13 +45,23 @@ uvicorn backend.app.main:app --reload
 bash scripts/test.sh
 ```
 
+#### clean daily status
+
+```
+bash scripts/test-reset.sh
+```
+
 ## Links
 
-### access page
+### frontend access page
+
+http://localhost
+
+### api access page
 
 http://localhost:8008
 
-### docs page
+### api docs page
 
 http://localhost:8008/docs
 
